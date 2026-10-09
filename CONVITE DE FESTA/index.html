@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convite de Festa</title>
+
+      <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+ 
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="styles/import.css">
+</head>
+<body>
+  <!-- ══ TOP BAR ══ -->
+  <header class="topbar">
+    <div class="topbar-dot"></div>
+    <span class="topbar-logo">Festivite</span>
+  </header>
+ 
+  <!-- ══ APP ══ -->
+  <div class="app">
+ 
+    <!-- ── LEFT: PREVIEW ── -->
+    <aside class="preview-col">
+      <p class="preview-label">Preview do Convite</p>
+ 
+      <div class="invite-card dark-style" id="inviteCard">
+ 
+        <div class="invite-cover">
+        <img class="invite-cover-img visible" id="coverImg" src="assets/convite.png" alt="">
+          <div class="invite-cover-overlay"></div>
+          <div class="invite-cover-theme-icon" id="previewThemeIcon"></div>
+        </div>
+ 
+        <div class="invite-body">
+          <div class="invite-accent-bar" id="accentBar"></div>
+          <div class="invite-badge" id="previewBadge">Aniversário</div>
+          <div class="invite-title" id="previewTitle">Nome do evento</div>
+ 
+          <div class="invite-meta">
+            <div class="invite-meta-item">
+              <svg class="invite-meta-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="2" y="3" width="12" height="11" rx="2"/>
+                <path d="M5 1v4M11 1v4M2 7h12"/>
+              </svg>
+              <span id="previewDate">DD/MM/AAAA</span>
+            </div>
+            <div class="invite-meta-item">
+              <svg class="invite-meta-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M8 1.5A4.5 4.5 0 0 1 12.5 6c0 3.5-4.5 8.5-4.5 8.5S3.5 9.5 3.5 6A4.5 4.5 0 0 1 8 1.5Z"/>
+                <circle cx="8" cy="6" r="1.5"/>
+              </svg>
+              <span id="previewLocal">A definir</span>
+            </div>
+          </div>
+ 
+          <div class="invite-desc" id="previewDesc">Detalhes do evento aparecerão aqui.</div>
+        </div>
+ 
+        <div class="invite-footer">
+          <span class="invite-footer-logo">Festivite</span>
+          <button class="invite-footer-btn" id="previewBtn">Confirmar</button>
+        </div>
+ 
+      </div>
+    </aside>
+ 
+    <!-- ── RIGHT: FORM ── -->
+    <main class="form-col">
+      <h1 class="page-title"><span class="emoji">🎉</span> Crie seu convite</h1>
+ 
+      <!-- SOBRE O EVENTO -->
+      <div class="section">
+        <div class="section-header">
+          <div class="section-icon">📋</div>
+          <span class="section-title">Sobre o evento</span>
+        </div>
+ 
+        <div class="field">
+          <label for="titulo">Título do evento</label>
+          <input type="text" id="titulo" placeholder="Nome do evento">
+          <div class="field-error" id="err-titulo">Campo obrigatório</div>
+        </div>
+ 
+        <div class="field field-row">
+          <div>
+            <label for="inicio">Início</label>
+            <input type="datetime-local" id="inicio">
+            <div class="field-error" id="err-inicio">Campo obrigatório</div>
+          </div>
+          <div>
+            <label for="fim">Fim</label>
+            <input type="datetime-local" id="fim">
+            <div class="field-error" id="err-fim">Campo obrigatório</div>
+          </div>
+        </div>
+ 
+        <div class="field">
+          <label>Tipo</label>
+          <div class="radio-group">
+            <label class="radio-btn active" id="rb-presencial">
+              <input type="radio" name="tipo" value="presencial" checked>
+              <span class="radio-dot"></span> Presencial
+            </label>
+            <label class="radio-btn" id="rb-online">
+              <input type="radio" name="tipo" value="online">
+              <span class="radio-dot"></span> Online
+            </label>
+          </div>
+          <div class="field-error" id="err-tipo">Campo obrigatório</div>
+        </div>
+ 
+        <div class="field">
+          <label for="local">Local</label>
+          <input type="text" id="local" placeholder="Informe o endereço do evento">
+          <div class="field-error" id="err-local">Campo obrigatório</div>
+        </div>
+ 
+        <div class="field">
+          <label for="descricao">Descrição</label>
+          <textarea id="descricao" placeholder="Escreva sobre os detalhes do evento"></textarea>
+          <div class="field-error" id="err-descricao">Campo obrigatório</div>
+        </div>
+      </div>
+ 
+      <!-- PERSONALIZAÇÃO -->
+      <div class="section">
+        <div class="section-header">
+          <div class="section-icon">🎨</div>
+          <span class="section-title">Personalização</span>
+        </div>
+ 
+        <div class="field">
+          <label>Cor principal</label>
+          <div class="color-grid" id="colorGrid"></div>
+        </div>
+ 
+        <div class="field">
+          <label>Tema do evento</label>
+          <div class="theme-grid" id="themeGrid"></div>
+        </div>
+ 
+        <div class="field field-row" style="align-items: end;">
+          <div>
+            <label>Estilo</label>
+            <div class="style-toggle">
+              <label class="toggle-switch">
+                <input type="checkbox" id="darkToggle">
+                <div class="toggle-track"></div>
+                <div class="toggle-thumb"></div>
+              </label>
+              <span class="toggle-label" id="toggleLabel">Escuro</span>
+            </div>
+          </div>
+          <div>
+            <label>Foto de capa</label>
+            <div class="upload-area">
+              <label class="upload-btn">
+                <svg width="15" height="15" viewBox="0 0 15 15" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M7.5 10V2M4 5l3.5-3L11 5"/>
+                  <path d="M2 11v1a1 1 0 0 0 1 1h9a1 1 0 0 0 1-1v-1"/>
+                </svg>
+                Selecionar
+                <input type="file" id="coverUpload" accept="image/jpeg,image/png,image/webp">
+              </label>
+              <img class="upload-preview-thumb" id="uploadThumb" src="" alt="">
+              <span class="upload-filename" id="uploadFilename">Nenhum arquivo selecionado</span>
+            </div>
+          </div>
+        </div>
+      </div>
+ 
+      <!-- DADOS PARA CONTATO -->
+      <div class="section">
+        <div class="section-header">
+          <div class="section-icon">👤</div>
+          <span class="section-title">Dados para contato</span>
+        </div>
+ 
+        <div class="field">
+          <label for="nome">Nome completo</label>
+          <input type="text" id="nome" placeholder="Nome completo">
+          <div class="field-error" id="err-nome">Campo obrigatório</div>
+        </div>
+ 
+        <div class="field field-row">
+          <div>
+            <label for="email">E-mail</label>
+            <input type="email" id="email" placeholder="exemplo@email.com">
+            <div class="field-error" id="err-email">Informe um e-mail válido</div>
+          </div>
+          <div>
+            <label for="tel">Telefone</label>
+            <input type="tel" id="tel" placeholder="(99) 99999-9999" maxlength="15">
+            <div class="field-error" id="err-tel">Informe um telefone válido</div>
+          </div>
+        </div>
+ 
+        <div class="checkbox-group">
+          <label class="checkbox-item">
+            <input type="checkbox" id="termos" required>
+            <span class="checkbox-box"></span>
+            Li e concordo com os <a href="#">Termos e Condições</a> e com a <a href="#">Política de Privacidade</a>
+          </label>
+          <label class="checkbox-item">
+            <input type="checkbox" id="opt-email">
+            <span class="checkbox-box"></span>
+            Aceito receber atualizações e promoções por e-mail
+          </label>
+          <label class="checkbox-item">
+            <input type="checkbox" id="opt-sms">
+            <span class="checkbox-box"></span>
+            Aceito receber atualizações e promoções por SMS
+          </label>
+        </div>
+        <div class="field-error" id="err-termos" style="margin-top: 8px;">Aceite os termos para continuar</div>
+      </div>
+ 
+      <div class="submit-area">
+        <button class="btn-submit" id="btnGerar">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M3 9h12M9 3l6 6-6 6"/>
+          </svg>
+          Gerar Convite
+        </button>
+      </div>
+    </main>
+  </div>
+ 
+  <!-- ══ SUCCESS MODAL ══ -->
+  <div class="modal-overlay" id="successModal">
+    <div class="modal">
+      <div class="modal-icon">🎉</div>
+      <div class="modal-title">Convite Criado!</div>
+      <div class="modal-text">Seu convite foi gerado com sucesso.<br>Compartilhe e celebre com quem você ama.</div>
+      <button class="modal-btn" onclick="closeModal()">Ótimo!</button>
+    </div>
+  </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

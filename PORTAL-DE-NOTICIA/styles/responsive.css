@@ -1,0 +1,152 @@
+/* ============================================================================
+   responsive.css  —  CAMADA DE RESPONSIVIDADE
+   ----------------------------------------------------------------------------
+   ESTRATÉGIA: Desktop-First com max-width.
+   O CSS original (global / utility / header / sections) NÃO foi alterado.
+   Tudo aqui:
+     (a) só "liga" em telas menores (media queries max-width), OU
+     (b) é uma melhoria fluida cujo TETO é o valor original do desktop
+         (clamp(min, fluido, TETO) -> no desktop sempre cai no TETO),
+         portanto o desktop continua pixel-a-pixel igual.
+
+   BREAKPOINTS (apenas 3, escolhidos pela MUDANÇA DE FORMA do layout):
+     1024px -> tablets e notebooks pequenos  (quebra a grade de 2 colunas)
+      768px -> tablet retrato / celular grande (empilha o "featured")
+      480px -> smartphones                     (ajustes finos de header)
+   ============================================================================ */
+
+
+/* ============================================================================
+   0. BASE FLUIDA  (vale em TODAS as larguras, mas sem mexer no desktop)
+   ============================================================================ */
+
+/* Reset de imagem recomendado:
+   - display:block  -> remove o "gap fantasma" de 3~4px que <img> inline cria
+                       embaixo (alinhamento de baseline de texto).
+   - height:auto    -> garante proporção; alturas EXPLÍCITAS do projeto
+                       (#weekly img, #featured img) têm mais especificidade
+                       e continuam valendo, então nada muda no desktop. */
+img {
+    display: block;
+    height: auto;
+}
+
+/* Respiro lateral do container vira fluido.
+   No desktop: 5vw é sempre > 32px -> clamp devolve 32px (IGUAL ao original).
+   No celular (320px): 5vw = 16px  -> sobra mais tela pro conteúdo. */
+.container {
+    padding-inline: clamp(16px, 5vw, 32px);
+}
+
+/* Tipografia fluida do título do hero (única fonte realmente grande, 24px).
+   Teto = 24px -> no desktop renderiza 24px idêntico; em telas pequenas
+   desce suavemente até 20px sem precisar de media query. */
+#featured .text-2xl {
+    font-size: clamp(20px, 4.5vw, 24px);
+}
+
+/* CORREÇÃO DE OVERFLOW PRÉ-EXISTENTE — seção "Mais lidas da semana":
+   o original usava grid-template-columns: repeat(4, 292px) = colunas FIXAS.
+   4*292 + 3*24(gap) = 1240px, e o conteúdo do container tem só 1216px.
+   Coluna fixa NÃO encolhe -> sobra 24px que escapam e geram scroll lateral
+   em qualquer viewport abaixo de ~1300px.
+   minmax(0, 1fr) mantém as 4 colunas, mas agora elas se DIVIDEM o espaço
+   disponível (ficam ~286px) e nunca estouram. (Diferença visual: ~6px.) */
+#weekly > div {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+/* Imagem dos "Destaques de IA": vira fluida, mas travada em 176px no desktop.
+   22vw só fica abaixo de 176px quando a viewport < ~800px (tablet/celular),
+   então no desktop continua exatamente 176px. */
+#ai img {
+    width: clamp(112px, 22vw, 176px);
+}
+
+/* SALVAGUARDA clássica de Grid/Flex:
+   itens de grid têm min-width:auto por padrão, e isso impede o texto de
+   encolher, causando vazamentos. min-width:0 libera o encolhimento. */
+#ai article > div,
+#more article > div,
+#weekly figure,
+#featured .card figcaption {
+    min-width: 0;
+}
+
+
+/* ============================================================================
+   1.  <= 1024px  ·  TABLETS E NOTEBOOKS PEQUENOS
+   Aqui o layout de 2 colunas (conteúdo | barra lateral) não cabe mais.
+   ============================================================================ */
+@media (max-width: 1024px) {
+
+    /* Trava qualquer scroll lateral residual no mobile (cinto de segurança).
+       Fica SÓ no mobile para não arriscar "cortar" nada no desktop. */
+    body {
+        overflow-x: hidden;
+    }
+
+    /* main deixa de ser "1fr 30%" e passa a ter 1 coluna.
+       A barra lateral (aside) desce para baixo do conteúdo de IA. */
+    main {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "featured"
+            "weekly"
+            "ai"
+            "aside";
+        row-gap: 56px;
+    }
+
+    /* "Mais lidas": de 4 para 2 colunas (cabe bem em tablet/celular). */
+    #weekly > div {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+    }
+
+    /* Menu de categorias: 7 links em UMA linha rígida estouram a tela.
+       Viram flex com quebra automática (flex-wrap) e ganham respiro. */
+    #secondary {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px 16px;
+    }
+}
+
+
+/* ============================================================================
+   2.  <= 768px  ·  TABLET RETRATO / CELULAR GRANDE
+   ============================================================================ */
+@media (max-width: 768px) {
+
+    /* "featured" deixa de ser hero AO LADO da grade 2x2.
+       grid-auto-flow:row + 1 coluna -> hero EM CIMA, grade EMBAIXO. */
+    #featured {
+        grid-auto-flow: row;
+        grid-template-columns: 1fr;
+    }
+
+    /* Menos respiro vertical entre as seções em telas menores. */
+    main {
+        row-gap: 40px;
+    }
+}
+
+
+/* ============================================================================
+   3.  <= 480px  ·  SMARTPHONES
+   ============================================================================ */
+@media (max-width: 480px) {
+
+    /* O logo tem 160px fixos. Em telas muito estreitas ele espreme o
+       "Menu" e o "Buscar". Aqui ele pode encolher até 110px.
+       (No desktop nunca chega aqui, então continua 160px.) */
+    #primary div:nth-child(2) img {
+        max-width: clamp(110px, 34vw, 160px);
+    }
+
+    /* Cards de "Mais lidas" bem juntos em telas pequenas. */
+    #weekly > div {
+        gap: 12px;
+    }
+}

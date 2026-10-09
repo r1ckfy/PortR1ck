@@ -1,0 +1,139 @@
+section header {
+    display: grid;
+    grid-auto-flow: column;
+
+    justify-content: space-between;
+    align-items: center;
+
+    border-top: 1px solid var(--stroke-color);
+    padding-block: 12px 24px;
+    font: var(--text-span);
+
+    a {
+        justify-self: end;
+        align-items: center;
+        gap: 8px;
+
+        span {
+            background-image: url(../assets/Icons/ArrowRight-hover.svg);
+            width: 16px;
+            height: 16px;
+        }
+
+        &:hover span {
+            background-image: url(../assets/Icons/ArrowRight.svg);
+        }
+    }
+}
+
+#featured {
+    grid-area: featured;
+    img {
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .card{
+        position: relative;
+        overflow: hidden;
+        border-radius: 8px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            top: 50%;
+            background: linear-gradient(
+                180deg, 
+                transparent, 
+                rgb(12, 12, 36));
+        }
+        figcaption {
+            position: absolute;
+            bottom: 0;
+
+            padding: 24px;
+
+            /* se ter a classe text-lg, o padding é 12px */
+            &:has(.text-lg){
+                padding: 12px;
+            }
+
+            h2 {
+                margin-top: 8px;
+            }
+        }
+    }
+}
+
+#weekly {
+    grid-area: weekly;
+
+    & > div {
+        display: grid;
+        grid-template-columns: repeat(4, 292px);
+        gap: 24px;
+        align-items: start;
+
+    }    
+
+    img {
+        height: 160px;
+        width: 100%;
+        object-fit: cover;
+
+    }
+
+    figure {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+
+        .content-tag {
+            position: absolute;
+            top: 8px;
+            left: 8px;
+        }
+
+        p {
+            margin-top: 8px;
+            font-weight: 800;
+            line-height: 1.4;
+            min-height: 72px;
+        }
+    }
+}
+
+#ai {
+    grid-area: ai;
+
+    img {
+        width: 176px;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+    }
+
+    h3 {
+        margin-block: 8px 4px;
+    }
+}
+
+aside {
+    grid-area: aside;
+}
+
+#more {
+
+    margin-top: 32px;
+
+    h3{
+        margin-top: 8px;
+    }
+
+    img {
+        width: 72px;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+    }
+
+}

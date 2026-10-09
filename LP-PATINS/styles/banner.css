@@ -1,0 +1,41 @@
+.banner {
+  max-width: 100%;
+  height: 40px;              /* a faixa em si */
+  display: flex;
+  align-items: center;       /* centraliza o texto vertical */
+  overflow: hidden;
+  background: linear-gradient(90deg, #ec4899, #a78bfa);
+}
+
+.scroller {
+  width: 100%;
+  overflow: hidden;
+}
+
+.rolling {
+  display: flex;
+  gap: 1.5rem;
+  width: max-content;
+  animation: scroll-left 30s linear infinite;
+}
+
+.rolling-list {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-shrink: 0;
+}
+
+.rolling-list li {
+  font-weight: 800;
+  font-size: 1rem;           /* 16px cabe folgado em 40 */
+  line-height: 1;            /* evita o texto empurrar a altura */
+  white-space: nowrap;
+}
+
+@keyframes scroll-left {
+  from { transform: translateX(0); }
+  to   { transform: translateX(calc(-50% - 0.75rem)); }
+}
