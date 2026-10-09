@@ -17,12 +17,16 @@ Criador de convites online com preview em tempo real. Dá para escolher cor, tem
 
 `HTML` `CSS` `JavaScript` `Responsivo`
 
+<img src="prints/convite.png" alt="Print do projeto" width="700">
+
 🌐 [Ver online](https://r1ckfy.github.io/PortR1ck/CONVITE%20DE%20FESTA/) &nbsp;·&nbsp; 📁 [Ver código](./CONVITE%20DE%20FESTA)
 
 ### 🛼 Snitap Patins
 Landing page de uma marca de patins, com hero animado, galeria de fotos e rodapé com redes sociais.
 
 `HTML` `CSS` `Animações` `Grid` `Responsivo`
+
+<img src="prints/patins.png" alt="Print do projeto" width="700">
 
 🌐 [Ver online](https://r1ckfy.github.io/PortR1ck/LP-PATINS/) &nbsp;·&nbsp; 📁 [Ver código](./LP-PATINS)
 
@@ -31,12 +35,16 @@ Portal de notícias de tecnologia com destaque principal, grade de matérias e b
 
 `HTML` `CSS` `Grid` `Responsivo`
 
+<img src="prints/portal.png" alt="Print do projeto" width="700">
+
 🌐 [Ver online](https://r1ckfy.github.io/PortR1ck/PORTAL-DE-NOTICIA/) &nbsp;·&nbsp; 📁 [Ver código](./PORTAL-DE-NOTICIA)
 
 ### 📝 Formulário de Matrícula
 Formulário de matrícula da escola fictícia Estrelas do Amanhã, com área de upload de arquivos, botões de opção personalizados e campos organizados por seção.
 
 `HTML` `CSS` `Formulários` `Grid`
+
+<img src="prints/formulario.png" alt="Print do projeto" width="700">
 
 🌐 [Ver online](https://r1ckfy.github.io/PortR1ck/FORMULARIO%20DE%20MATRICULA/) &nbsp;·&nbsp; 📁 [Ver código](./FORMULARIO%20DE%20MATRICULA)
 
@@ -45,6 +53,8 @@ Perfil de viagens no estilo de rede social, com bio, contadores e galeria de fot
 
 `HTML` `CSS`
 
+<img src="prints/travelgram.png" alt="Print do projeto" width="700">
+
 🌐 [Ver online](https://r1ckfy.github.io/PortR1ck/PROJETO%20TRAVELGRAM/) &nbsp;·&nbsp; 📁 [Ver código](./PROJETO%20TRAVELGRAM)
 
 ### 🏖️ Local Turístico
@@ -52,12 +62,16 @@ Página sobre Copacabana, com a história do bairro e os lugares para visitar.
 
 `HTML` `CSS`
 
+<img src="prints/turistico.png" alt="Print do projeto" width="700">
+
 🌐 [Ver online](https://r1ckfy.github.io/PortR1ck/LOCAL%20TURISTICO/) &nbsp;·&nbsp; 📁 [Ver código](./LOCAL%20TURISTICO)
 
 ### 🧁 Receita de Cupcake
 Página de receita de cupcake de café com chantilly, com lista de ingredientes e modo de preparo.
 
 `HTML` `CSS`
+
+<img src="prints/cupcake.png" alt="Print do projeto" width="700">
 
 🌐 [Ver online](https://r1ckfy.github.io/PortR1ck/RECEITA%20CUPCAKE/) &nbsp;·&nbsp; 📁 [Ver código](./RECEITA%20CUPCAKE)
 
