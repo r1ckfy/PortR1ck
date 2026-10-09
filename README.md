@@ -17,49 +17,49 @@ Criador de convites online com preview em tempo real. Dá para escolher cor, tem
 
 `HTML` `CSS` `JavaScript` `Responsivo`
 
-📁 [Ver código](./CONVITE%20DE%20FESTA)
+🌐 [Ver online](https://r1ckfy.github.io/PortR1ck/CONVITE%20DE%20FESTA/) &nbsp;·&nbsp; 📁 [Ver código](./CONVITE%20DE%20FESTA)
 
 ### 🛼 Snitap Patins
 Landing page de uma marca de patins, com hero animado, galeria de fotos e rodapé com redes sociais.
 
 `HTML` `CSS` `Animações` `Grid` `Responsivo`
 
-📁 [Ver código](./LP-PATINS)
+🌐 [Ver online](https://r1ckfy.github.io/PortR1ck/LP-PATINS/) &nbsp;·&nbsp; 📁 [Ver código](./LP-PATINS)
 
 ### 📰 Portal de Notícias
 Portal de notícias de tecnologia com destaque principal, grade de matérias e barra lateral. Layout responsivo para desktop, tablet e celular.
 
 `HTML` `CSS` `Grid` `Responsivo`
 
-📁 [Ver código](./PORTAL-DE-NOTICIA)
+🌐 [Ver online](https://r1ckfy.github.io/PortR1ck/PORTAL-DE-NOTICIA/) &nbsp;·&nbsp; 📁 [Ver código](./PORTAL-DE-NOTICIA)
 
 ### 📝 Formulário de Matrícula
 Formulário de matrícula da escola fictícia Estrelas do Amanhã, com área de upload de arquivos, botões de opção personalizados e campos organizados por seção.
 
 `HTML` `CSS` `Formulários` `Grid`
 
-📁 [Ver código](./FORMULARIO%20DE%20MATRICULA)
+🌐 [Ver online](https://r1ckfy.github.io/PortR1ck/FORMULARIO%20DE%20MATRICULA/) &nbsp;·&nbsp; 📁 [Ver código](./FORMULARIO%20DE%20MATRICULA)
 
 ### ✈️ Travelgram
 Perfil de viagens no estilo de rede social, com bio, contadores e galeria de fotos.
 
 `HTML` `CSS`
 
-📁 [Ver código](./PROJETO%20TRAVELGRAM)
+🌐 [Ver online](https://r1ckfy.github.io/PortR1ck/PROJETO%20TRAVELGRAM/) &nbsp;·&nbsp; 📁 [Ver código](./PROJETO%20TRAVELGRAM)
 
 ### 🏖️ Local Turístico
 Página sobre Copacabana, com a história do bairro e os lugares para visitar.
 
 `HTML` `CSS`
 
-📁 [Ver código](./LOCAL%20TURISTICO)
+🌐 [Ver online](https://r1ckfy.github.io/PortR1ck/LOCAL%20TURISTICO/) &nbsp;·&nbsp; 📁 [Ver código](./LOCAL%20TURISTICO)
 
 ### 🧁 Receita de Cupcake
 Página de receita de cupcake de café com chantilly, com lista de ingredientes e modo de preparo.
 
 `HTML` `CSS`
 
-📁 [Ver código](./RECEITA%20CUPCAKE)
+🌐 [Ver online](https://r1ckfy.github.io/PortR1ck/RECEITA%20CUPCAKE/) &nbsp;·&nbsp; 📁 [Ver código](./RECEITA%20CUPCAKE)
 
 ### 🎤 Zinguen Karaokê
 Landing page de um app de karaokê. 🚧 Em desenvolvimento.

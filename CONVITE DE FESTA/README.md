@@ -1,4 +1,4 @@
-# 🎉 Festivite — Criador de Convites Online
+# 🎉 Festivite: Criador de Convites Online
 
 Interface web para criação de convites digitais com preview em tempo real, personalização de cores, temas e upload de imagem de capa.
 
@@ -21,7 +21,7 @@ Interface web para criação de convites digitais com preview em tempo real, per
 
 ## 🚀 Como Rodar
 
-### Opção 1 — Abrir direto no navegador
+### Opção 1: Abrir direto no navegador
 
 1. Baixe ou clone o repositório
 2. Abra o arquivo `index.html` diretamente no navegador
@@ -30,7 +30,7 @@ Interface web para criação de convites digitais com preview em tempo real, per
 
 ---
 
-### Opção 2 — Live Server (recomendado)
+### Opção 2: Live Server (recomendado)
 
 Se estiver usando o **VS Code**, instale a extensão **Live Server**:
 
@@ -43,14 +43,14 @@ Se estiver usando o **VS Code**, instale a extensão **Live Server**:
 
 ## ✨ Funcionalidades
 
-- **Preview em tempo real** — o card do convite atualiza conforme você preenche
-- **Seletor de cor** — 11 cores que alteram o tema visual inteiro
-- **Temas do evento** — 12 opções (Aniversário, Casamento, Halloween, etc.)
-- **Estilo claro/escuro** — toggle que muda o visual do card
-- **Upload de imagem** — aceita JPG, PNG e WEBP
-- **Validação de formulário** — todos os campos com mensagens de erro
-- **Máscara de telefone** — formato `(99) 99999-9999`
-- **Responsivo** — funciona em desktop, tablet e mobile
+- **Preview em tempo real:** o card do convite atualiza conforme você preenche
+- **Seletor de cor:** 11 cores que alteram o tema visual inteiro
+- **Temas do evento:** 12 opções (Aniversário, Casamento, Halloween, etc.)
+- **Estilo claro/escuro:** toggle que muda o visual do card
+- **Upload de imagem:** aceita JPG, PNG e WEBP
+- **Validação de formulário:** todos os campos com mensagens de erro
+- **Máscara de telefone:** formato `(99) 99999-9999`
+- **Responsivo:** funciona em desktop, tablet e mobile
 
 ---
 
@@ -63,7 +63,7 @@ Se estiver usando o **VS Code**, instale a extensão **Live Server**:
 | JavaScript (Vanilla) | Interatividade e validações |
 | Google Fonts | Fontes `Playfair Display` e `DM Sans` |
 
-Sem frameworks, sem dependências — roda em qualquer navegador moderno.
+Sem frameworks e sem dependências, roda em qualquer navegador moderno.
 
 ---
 
