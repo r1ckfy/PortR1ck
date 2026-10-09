@@ -12,6 +12,15 @@
 
 ## 📂 Projetos
 
+### 🎙️ Zingen: Landing Page de Produto
+Landing page do Zingen, um app de karaokê com inteligência artificial, feita a partir de um projeto do Figma. Tem hero com onda sonora e horizonte brilhante, cards de funcionalidades com mockups do app, três planos de preço com destaque para o Premium e seção de download. Feita só com HTML e CSS, sem JavaScript.
+
+`HTML` `CSS` `Figma` `Grid` `Responsivo`
+
+<img src="prints/lp-produto.png" alt="Print do projeto" width="700">
+
+🌐 [Ver online](https://r1ckfy.github.io/PortR1ck/LP%20PRODUTO/) &nbsp;·&nbsp; 📁 [Ver código](./LP%20PRODUTO)
+
 ### 🎉 Convite de Festa
 Criador de convites online com preview em tempo real. Dá para escolher cor, tema do evento, estilo claro ou escuro e enviar uma imagem de capa. Tem validação de formulário e máscara de telefone.
 

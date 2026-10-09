@@ -1,0 +1,203 @@
+/* Tablet */
+@media (max-width: 1024px) {
+  .section {
+    padding-block: 96px;
+  }
+
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-flow: dense;
+  }
+
+  .app-content {
+    gap: 40px;
+  }
+
+  .pricing-grid {
+    gap: 16px;
+  }
+
+  .plan-card {
+    padding-inline: 24px;
+  }
+
+  .download-card {
+    padding: 64px 48px;
+  }
+
+  .download-text {
+    max-width: 50%;
+  }
+
+  .download-image {
+    right: 24px;
+    height: 560px;
+  }
+
+  .footer-top {
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 48px;
+  }
+
+  .footer-top .logo {
+    grid-column: 1 / -1;
+  }
+}
+
+/* Tablet em retrato */
+@media (max-width: 900px) {
+  .app-content {
+    grid-template-columns: 1fr;
+  }
+
+  .app-mockup {
+    justify-self: center;
+  }
+
+  .pricing-grid {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+    margin-inline: auto;
+    gap: 32px;
+  }
+
+  .download-card {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 56px 40px 0;
+  }
+
+  .download-text {
+    max-width: none;
+  }
+
+  .download-image {
+    position: static;
+    align-self: center;
+    height: auto;
+    width: 100%;
+    max-width: 360px;
+    margin-top: 40px;
+  }
+}
+
+/* Celular */
+@media (max-width: 768px) {
+  :root {
+    --font-size-h1: 40px;
+    --font-size-h2: 24px;
+    --font-size-h3: 20px;
+  }
+
+  .container {
+    padding-inline: 16px;
+  }
+
+  .section {
+    padding-block: 80px;
+  }
+
+  .header-content {
+    height: 72px;
+  }
+
+  .nav-list {
+    display: none;
+  }
+
+  .hero {
+    padding: 144px 0 220px;
+  }
+
+  .hero::after {
+    top: calc(100% - 120px);
+    width: 1400px;
+    height: 700px;
+  }
+
+  .hero::before {
+    bottom: 60px;
+    width: 1000px;
+    height: 320px;
+  }
+
+  .hero-wave {
+    width: 280px;
+    margin-bottom: 32px;
+  }
+
+  .hero-actions {
+    margin-top: 32px;
+    gap: 16px;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .feature-game,
+  .feature-community,
+  .feature-lyrics {
+    grid-column: auto;
+  }
+
+  .feature-card {
+    min-height: 0;
+    padding: 24px;
+  }
+
+  /* No celular o aparelho fica abaixo do texto e é cortado pela borda do card */
+  .feature-community {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .feature-phone,
+  .feature-game .feature-phone,
+  .feature-community .feature-phone,
+  .feature-lyrics .feature-phone {
+    position: static;
+    width: 220px;
+    margin: 32px auto -180px;
+  }
+
+  .feature-text,
+  .feature-community .feature-text {
+    max-width: none;
+    margin-left: 0;
+  }
+
+  .section-header {
+    margin-bottom: 40px;
+  }
+
+  .download {
+    padding-top: 80px;
+  }
+
+  .download-card {
+    padding: 40px 24px 0;
+  }
+
+  .download-text h2 {
+    margin: 12px 0 16px;
+  }
+
+  .footer-top {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-bottom {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    margin-top: 64px;
+  }
+}
+
+/* Celular pequeno */
+@media (max-width: 400px) {
+  .footer-top {
+    grid-template-columns: 1fr;
+  }
+}

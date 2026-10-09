@@ -1,0 +1,90 @@
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin-inline: auto;
+  padding-inline: 32px;
+}
+
+.text-secondary {
+  color: var(--text-color-secondary);
+}
+
+/* Rótulo pequeno acima dos títulos */
+.eyebrow {
+  display: block;
+  font-size: var(--font-size-span);
+  font-weight: 500;
+  line-height: 100%;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--brand-color-primary);
+}
+
+/* Botões: primário e secundário, com os estados do guia de componentes */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 20px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  font-size: var(--font-size-span);
+  font-weight: 500;
+  line-height: 100%;
+  white-space: nowrap;
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+}
+
+.btn-lg {
+  padding: 16px 24px;
+  font-size: var(--font-size-paragraph);
+}
+
+.btn-block {
+  width: 100%;
+}
+
+.btn-primary {
+  background: var(--text-color-primary);
+  color: var(--background-color);
+}
+
+.btn-primary:hover,
+.btn-primary:focus-visible {
+  background: var(--brand-gradient);
+}
+
+.btn-secondary {
+  border-color: var(--text-color-primary);
+  color: var(--text-color-primary);
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus-visible {
+  border-color: var(--brand-color-secondary);
+  color: var(--brand-color-primary);
+}
+
+/* Link de menu: usado no cabeçalho e no rodapé */
+.nav-link {
+  font-size: var(--font-size-span);
+  font-weight: 500;
+  line-height: 100%;
+  color: var(--text-color-primary);
+  transition: color 0.2s;
+}
+
+.nav-link:hover,
+.nav-link:focus-visible {
+  color: var(--brand-color-secondary);
+}
+
+/* Esconde elementos visualmente mantendo a página acessível */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}

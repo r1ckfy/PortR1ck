@@ -1,0 +1,366 @@
+/* Hero */
+.hero {
+  position: relative;
+  padding: 200px 0 300px;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Brilho laranja e amarelo acima do horizonte */
+.hero::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 1800px;
+  height: 600px;
+  transform: translateX(-50%);
+  background: radial-gradient(50% 60% at 50% 100%, rgba(247, 183, 51, 0.55) 0%, rgba(252, 74, 26, 0.35) 45%, rgba(252, 74, 26, 0) 100%);
+  pointer-events: none;
+}
+
+/* Horizonte curvo que leva para a próxima seção */
+.hero::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: calc(100% - 200px);
+  width: 2400px;
+  height: 1200px;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background: var(--surface-color);
+  box-shadow: 0 -2px 16px rgba(247, 183, 51, 0.7), 0 -16px 80px rgba(252, 74, 26, 0.5);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-wave {
+  width: 460px;
+  margin-bottom: 40px;
+}
+
+.hero-subtitle {
+  margin-top: 16px;
+  font-size: var(--font-size-h3);
+  line-height: 120%;
+  color: var(--text-color-secondary);
+}
+
+.hero-actions {
+  display: flex;
+  gap: 24px;
+  margin-top: 48px;
+}
+
+/* Conheça o app */
+.app {
+  padding-top: 64px;
+  background: var(--surface-color);
+}
+
+.app-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 64px;
+}
+
+.app-text h2 {
+  margin: 16px 0 24px;
+}
+
+/* Sombra que acompanha o contorno dos PNGs transparentes */
+.app-mockup,
+.feature-phone,
+.download-image {
+  filter: drop-shadow(0 24px 48px rgba(0, 0, 0, 0.6));
+}
+
+.app-mockup {
+  width: 100%;
+  max-width: 560px;
+  justify-self: end;
+}
+
+/* Funcionalidades */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+}
+
+.feature-card {
+  position: relative;
+  min-height: 400px;
+  padding: 32px;
+  border-radius: 16px;
+  background: var(--surface-color);
+  overflow: hidden;
+}
+
+.feature-game,
+.feature-community,
+.feature-lyrics {
+  grid-column: span 2;
+}
+
+.feature-icon {
+  width: 32px;
+  height: 32px;
+  margin-bottom: 24px;
+}
+
+.feature-card h3 {
+  margin-bottom: 16px;
+}
+
+.feature-text {
+  max-width: 256px;
+}
+
+.feature-phone {
+  position: absolute;
+  width: 244px;
+}
+
+.feature-game .feature-phone {
+  right: 32px;
+  bottom: 32px;
+}
+
+.feature-community .feature-phone {
+  left: 32px;
+  bottom: 32px;
+}
+
+.feature-community .feature-text {
+  margin-left: auto;
+  max-width: calc(100% - 276px);
+}
+
+.feature-lyrics .feature-phone {
+  top: 32px;
+  right: 32px;
+}
+
+/* Planos e preços */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  gap: 32px;
+}
+
+.plan-card {
+  position: relative;
+  padding: 32px;
+  border: 1px solid var(--stroke-color);
+  border-radius: 16px;
+  background: var(--surface-color);
+}
+
+.plan-featured {
+  padding-block: 72px 64px;
+  border-color: transparent;
+  background:
+    linear-gradient(var(--background-color), var(--background-color)) padding-box,
+    linear-gradient(180deg, #FC4A1A 0%, #F7B733 100%) border-box;
+}
+
+.plan-badge {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  padding: 10px 24px;
+  border-radius: 16px 0 16px 0;
+  background: var(--brand-gradient);
+  color: var(--background-color);
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 100%;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.plan-card .plan-name {
+  font-size: var(--font-size-paragraph);
+}
+
+.plan-description {
+  margin-top: 8px;
+  font-size: var(--font-size-span);
+  color: var(--text-color-secondary);
+}
+
+.plan-price {
+  margin: 32px 0 24px;
+  font-size: var(--font-size-h3);
+  font-weight: 800;
+  line-height: 120%;
+}
+
+.plan-period {
+  font-size: var(--font-size-span);
+  font-weight: 400;
+  color: var(--text-color-secondary);
+}
+
+.plan-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 32px;
+  padding-top: 32px;
+  border-top: 1px solid var(--stroke-color);
+}
+
+.plan-list li {
+  display: flex;
+  gap: 12px;
+  font-size: var(--font-size-span);
+  color: var(--text-color-secondary);
+}
+
+.plan-list li::before {
+  content: "";
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  background: url("../assets/Check.svg") center / contain no-repeat;
+}
+
+.plan-note {
+  margin-top: 24px;
+  font-size: var(--font-size-span);
+  color: var(--text-color-secondary);
+}
+
+/* Download */
+.download {
+  padding-top: 200px;
+}
+
+.download-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 540px;
+  padding: 80px;
+  border-radius: 24px;
+  background: var(--surface-color);
+}
+
+.download-text {
+  max-width: 630px;
+}
+
+.download-text h2 {
+  margin: 16px 0 24px;
+}
+
+.store-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 40px;
+}
+
+.store-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px 8px 12px;
+  border: 1px solid var(--text-color-secondary);
+  border-radius: 8px;
+  background: #000000;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 110%;
+  transition: border-color 0.2s;
+}
+
+.store-button small {
+  display: block;
+  font-size: 10px;
+  font-weight: 400;
+}
+
+.store-button:hover,
+.store-button:focus-visible {
+  border-color: var(--brand-color-secondary);
+}
+
+.download-image {
+  position: absolute;
+  right: 80px;
+  bottom: 0;
+  height: 660px;
+  width: auto;
+  max-width: none;
+  /* Corta a sombra que passaria da borda de baixo do card */
+  clip-path: inset(-100px -100px 0 -100px);
+}
+
+/* Rodapé */
+.footer {
+  padding: 64px 0 48px;
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: 417fr 287fr 287fr 225fr;
+  gap: 24px;
+}
+
+.footer-column ul {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  margin-top: 24px;
+  font-size: var(--font-size-span);
+  font-weight: 500;
+  line-height: 100%;
+}
+
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-top: 96px;
+}
+
+.social-list {
+  display: flex;
+  gap: 24px;
+}
+
+/* Ícones sociais inline para trocar a cor no hover */
+.social-link {
+  display: block;
+  width: 24px;
+  height: 24px;
+  fill: var(--text-color-secondary);
+  transition: fill 0.2s;
+}
+
+.social-link svg {
+  display: block;
+}
+
+.social-link:hover,
+.social-link:focus-visible {
+  fill: url(#brand-gradient);
+}
+
+.copyright {
+  font-size: var(--font-size-span);
+  color: var(--text-color-secondary);
+}

@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;800&display=swap');
+
+:root {
+  /* Cores do produto (valores do guia de estilos do Figma) */
+  --brand-gradient: linear-gradient(90deg, #FC4A1A 0%, #F7B733 100%);
+  --brand-color-primary: #F7B733;
+  --brand-color-secondary: #FC4A1A;
+
+  /* Cores de base */
+  --background-color: #09090B;
+  --surface-color: #18181B;
+  --stroke-color: #27272A;
+  --text-color-secondary: #A1A1AA;
+  --text-color-primary: #F4F4F5;
+
+  /* Tipografia desktop */
+  --font-family: 'Inter', sans-serif;
+  --font-size-h1: 64px;
+  --font-size-h2: 48px;
+  --font-size-h3: 32px;
+  --font-size-span: 14px;
+  --font-size-paragraph: 16px;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size-paragraph);
+  line-height: 160%;
+  color: var(--text-color-primary);
+  background-color: var(--background-color);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 800;
+  line-height: 120%;
+}
+
+h1 {
+  font-size: var(--font-size-h1);
+}
+
+h2 {
+  font-size: var(--font-size-h2);
+}
+
+h3 {
+  font-size: var(--font-size-h3);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
